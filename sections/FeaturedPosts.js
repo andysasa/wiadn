@@ -78,7 +78,7 @@ const FeaturedPosts = () => {
 
     const customLeftArrow = (
       <div onMouseEnter={handleHover} onMouseLeave={endHover} className="left-arrow absolute arrow-btn left-0 text-center px-3 py-3 cursor-pointer bg-indigo-600 rounded-full hover:bg-turquoise hover:color-gray-800 duration-300 ease-linear">
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 text-white  w-full" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
         </svg>
       </div>
@@ -86,7 +86,7 @@ const FeaturedPosts = () => {
 
     const customRightArrow = (
       <div onMouseEnter={handleHover} onMouseLeave={endHover} className="right-arrow absolute arrow-btn right-0 text-center px-3 py-3 cursor-pointer bg-indigo-600 hover:bg-turquoise rounded-full duration-300 ease-linear">
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 text-white w-full" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
         </svg>
       </div>
