@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    &:before{
+      content:'';
+      content: "";
+      width: 100%;
+      height: 100vh;
+      background: linear-gradient(to right bottom, #ff9966, #ff5e62);
+      /* background: #D3D3D3; */
+      /* background-image: url("../public/bg.jpg"); */
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: -1;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+@layer components {
+  .text-shadow {
+    text-shadow: 0px 2px 0px rgb(0 0 0 / 30%);
+  }
+
+  .adjacent-post {
+    & .arrow-btn{
+      transition: width 300ms ease;
+      width: 50px;
+    }
+    &:hover{
+      & .arrow-btn{
+        width: 60px;
+      }
+    }
+  }
+
+  .react-multi-carousel-list {
+    & .arrow-btn{
+      transition: width 300ms ease;
+      width: 50px;
+      &:hover{
+        width: 60px;
+      }
+    }
+    
+  }
+
+  .burger-transition {
+    span {
+        &:nth-child(1) {
+            transition: top 0.3s cubic-bezier(0.21, 0.83, 0.26, 0.87) 0.3s,
+                transform 0.3s cubic-bezier(0.21, 0.83, 0.26, 0.87);
+        }
+        &:last-child {
+            transition: top 0.3s cubic-bezier(0.21, 0.83, 0.26, 0.87) 0.3s,
+                transform 0.3s cubic-bezier(0.21, 0.83, 0.26, 0.87);
+        }
+    }
+}
+
+  .open {
+      @apply bg-[#5bc4bf] rounded-full hover:bg-coral duration-200 ease-linear;
+      span {
+          &:nth-child(1) {
+              @apply top-5;
+              transform: translateX(-50%) translateY(0) rotate(45deg);
+              transition: top 0.3s cubic-bezier(0.21, 0.83, 0.26, 0.87),
+                  transform 0.3s cubic-bezier(0.21, 0.83, 0.26, 0.87) 0.3s;
+          }
+          &:nth-child(2) {
+              opacity: 0;
+          }
+          &:last-child {
+              @apply top-5;
+              transform: translateX(-50%) translateY(0) rotate(-45deg);
+              transition: bottom 0.3s cubic-bezier(0.21, 0.83, 0.26, 0.87),
+                  transform 0.3s cubic-bezier(0.21, 0.83, 0.26, 0.87) 0.3s;
+          }
+      }
+  }
+}
