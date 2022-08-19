@@ -4,7 +4,7 @@ import Link from 'next/link';
 const Resources = () => {
 
   return (
-    <div className='bg-white shadow-lg rounded-lg lg:p-8 pb-12 mb-8'>
+    <div className='bg-white shadow-lg rounded-lg p-4 lg:p-8 pb-12 mb-8'>
       <h1 className='mb-8 text-5xl font-semibold'>
         Resources
       </h1>

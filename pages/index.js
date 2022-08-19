@@ -6,6 +6,7 @@ import { getRecentPosts } from '../services'
 import { FeaturedPosts } from '../sections'
 import Link from 'next/link';
 
+
 export default function Home( { posts }) {
   return (
     <div className="container mx-auto px-10 mb-8">
