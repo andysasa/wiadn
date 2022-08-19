@@ -28,7 +28,6 @@ const CommentsForm = ({ slug }) => {
     }
 
     const commentObj = { name, email, comment, slug };
-    console.log(commentObj)
 
     if (storeData) {
       window.localStorage.setItem('name', name);

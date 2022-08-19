@@ -23,6 +23,5 @@ export default async function comments(req, res) {
   `;
 
   const result = await graphQLClient.request(query, req.body);
-  console.log(result)
   return res.status(200).send(result);
 }
