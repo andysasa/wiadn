@@ -34,9 +34,9 @@ const Contact = () => {
         <input className="outline-none px-2 py-1 rounded-md mb-2 xl:col-span-5" pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$" type="email" id="email" name="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required />
         <label className="mb-2 text-turquoise xl:col-span-1" htmlFor="message">Message</label>
         <textarea className="outline-none px-2 py-1 rounded-md mb-8 xl:col-span-11" id="message" name="message" rows="8" value={message} onChange={(e) => setMessage(e.target.value)} required />
-        <div className="g-recaptcha" data-sitekey="6LcT248hAAAAAPV4FbMO0aADwHbja0fEQ-NO26ug
-"></div>
-        <button className="xl:col-end-13 mb-4" type="submit" >
+        <div className="mb-8 xl:col-start-2"></div>
+        <button className="g-recaptcha xl:col-end-13 mb-4" data-sitekey="6LcT248hAAAAAPV4FbMO0aADwHbja0fEQ-NO26ug
+        " type="submit" >
           <div className="bg-turquoise px-4 py-2 w-fit rounded-full text-gray-900 hover:bg-indigo-900 hover:text-gray-200 duration-300 ease-in">Submit</div>
         </button>
       </form>
