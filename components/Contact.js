@@ -21,10 +21,14 @@ const Contact = () => {
     alert("Form Submitted");
   }
 
+  const handleSubmit = () => {
+    document.getElementById("demo-form").submit();
+  }
+
 
   return (
     <div>
-      <form onSubmit={onSubmit} className="bg-indigo-600 px-4 py-8 lg:px-12 rounded-xl grid xl:grid-cols-12 xl:gap-4" method="POST">
+      <form onSubmit={onSubmit} className="contact-form bg-indigo-600 px-4 py-8 lg:px-12 rounded-xl grid xl:grid-cols-12 xl:gap-4" method="POST">
         <h1 className='mb-8 text-offwhite text-5xl font-semibold xl:col-span-12'>
           Contact
         </h1>
@@ -36,7 +40,7 @@ const Contact = () => {
         <textarea className="outline-none px-2 py-1 rounded-md mb-8 xl:col-span-11" id="message" name="message" rows="8" value={message} onChange={(e) => setMessage(e.target.value)} required />
         <div className="mb-8 xl:col-start-2"></div>
         <button className="g-recaptcha xl:col-end-13 mb-4" data-sitekey="6LcT248hAAAAAPV4FbMO0aADwHbja0fEQ-NO26ug
-        " type="submit" >
+        " data-callback="handleSubmit" type="submit" >
           <div className="bg-turquoise px-4 py-2 w-fit rounded-full text-gray-900 hover:bg-indigo-900 hover:text-gray-200 duration-300 ease-in">Submit</div>
         </button>
       </form>
