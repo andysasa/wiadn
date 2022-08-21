@@ -57,8 +57,9 @@ const Contact = () => {
         {/* <div className="g-recaptcha mb-8 xl:col-start-2" data-sitekey="6Ld-rpMhAAAAAGwR0yhNAcxZVhUGERwZxi7Yco35
         "></div> */}
         <ReCAPTCHA 
-          className="mb-8 xl:col-start-2"
+          className="xl:col-start-2"
           ref={recaptchaRef}
+          size="compact"
           sitekey= {RECAPTCHA_SITE_KEY}
           onChange={onReCAPTCHAChange}
         />
