@@ -27,7 +27,7 @@ const Resources = () => {
           </li>
           <li className="my-2">
               <a className="text-indigo-600 hover:text-turquoise duration-200 ease-linear" href={`https://qprinstitute.com/`} target="_blank" rel="noopener noreferrer">Modern Vet Solutions</a>
-              <p className="text-sm px-4">Andy's very own web developerment, consultation, and relief service. Find innovative ways to be involved in veterinary medicine.</p>
+              <p className="text-sm px-4">Andy&apos;s very own web developerment, consultation, and relief service. Find innovative ways to be involved in veterinary medicine.</p>
           </li>
       </ul>
       <div className='relative overflow-hidden mb-6'>
