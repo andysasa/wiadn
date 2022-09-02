@@ -24,7 +24,7 @@ const PostDetail = ({ post }) => {
       }
 
       if (obj.href) {
-        modifiedText = ( <a className="underline text-indigo-600" key={index} href={obj.href} target="_blank">{obj.children[0].text}</a> )
+        modifiedText = ( <a className="underline text-indigo-600" key={index} href={obj.href} target="_blank" rel="noreferrer">{obj.children[0].text}</a> )
       }
 
     }
