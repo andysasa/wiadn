@@ -8,7 +8,7 @@ import { getAboutDetails, getRecentPosts } from '../../services'
 import { FeaturedPosts } from '../../sections'
 import Link from 'next/link';
 
-const typeWriter = ["Welcome ,"];
+const typeWriter = ["Welcome,"];
 
 export default function Home({ abouts }) {
   

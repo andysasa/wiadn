@@ -1,8 +1,13 @@
 import React from 'react';
 import moment from 'moment';
+import Image from 'next/image';
 
 
 const PostDetail = ({ post }) => {
+  const myLoader = ({ src }) => {
+    return `${src}`
+  }
+
   const getContentFragment = (index, text, obj, type) => {
     let modifiedText = text;
     if (obj) {
@@ -18,9 +23,15 @@ const PostDetail = ({ post }) => {
         modifiedText = (<u key={index}>{text}</u>);
       }
 
+      if (obj.href) {
+        modifiedText = ( <a className="underline text-indigo-600" key={index} href={obj.href} target="_blank">{obj.children[0].text}</a> )
+      }
+
     }
 
     switch (type) {
+      case 'heading-two':
+        return <h2 key={index} className="text-xl font-semibold mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h2>;
       case 'heading-three':
         return <h3 key={index} className="text-xl font-semibold mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h3>;
       case 'paragraph':
@@ -29,7 +40,8 @@ const PostDetail = ({ post }) => {
         return <h4 key={index} className="text-md font-semibold mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h4>;
       case 'image':
         return (
-          <img
+          <Image
+            loader={myLoader}
             key={index}
             alt={obj.title}
             height={obj.height}
@@ -37,9 +49,13 @@ const PostDetail = ({ post }) => {
             src={obj.src}
           />
         );
-        case 'code-block':
-            let iframeCode = obj.children[0].text;
-            return <span key={index} className="flex justify-center" dangerouslySetInnerHTML={{__html: iframeCode}}></span>
+      case 'code-block':
+          let iframeCode = obj.children[0].text;
+          return <span key={index} className="flex justify-center" dangerouslySetInnerHTML={{__html: iframeCode}}></span>;
+      case 'link':
+          let text = obj.children[0].text;
+          let href = obj.href;
+          return <a href={href}>{text}</a>
       default:
         return modifiedText;
     }
@@ -48,15 +64,19 @@ const PostDetail = ({ post }) => {
   return (
     <div className='bg-white shadow-lg rounded-lg p-5 md:p-8 pb-12 mb-8'>
       <div className='relative overflow-hidden mb-6'>
-        <img 
+        <Image
+          loader={myLoader} 
           src={post.featuredImage.url}
           alt={post.title}
+          width="890px"
+          height="500px"
           className='object-top h-full w-full rounded-t-lg'
         />
         <div className='px-4 lg:px-0 text-sm lg:text-base'>
           <div className='flex items-center my-6 w-full'> 
             <div className='flex items-center lg:mb-0 w-full lg:w-auto mr-8'>
-                <img 
+                <Image
+                    loader={myLoader} 
                     alt={post.author.name}
                     height="60px"
                     width="60px"

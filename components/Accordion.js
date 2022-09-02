@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
+import Image from 'next/image';
 
 const Accordion = ({ about }) => {
+  const myLoader = ({ src }) => {
+    return `${src}`
+  }
   const [isActive, setIsActive] = useState(false);
 
   const getContentFragment = (index, text, obj, type) => {
@@ -29,7 +33,8 @@ const Accordion = ({ about }) => {
         return <h4 key={index} className="text-md font-semibold mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h4>;
       case 'image':
         return (
-          <img
+          <Image
+            loader={myLoader}
             key={index}
             alt={obj.title}
             height={obj.height}

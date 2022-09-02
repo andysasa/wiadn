@@ -11,18 +11,23 @@ const Hero = () => {
           One in Six Veterinarians Have Seriously Considered Suicide ...
         </h1>
         <p className='mb-4 xl:text-lg'>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione unde molestias repellat dignissimos temporibus iusto nam. Expedita vitae at deleniti eveniet, soluta ad cupiditate quas illo commodi consequatur beatae inventore voluptas magni dignissimos ratione. Autem ducimus laudantium illum itaque voluptatibus.
+          This is the most pressing issue facing the veterinary industry today. This is an incredibly complex problem and there is not a silver bullet.
+        </p>
+        
+        <p className='mb-4 xl:text-lg'>
+          Through collaboration and positivity, I believe veterinarians can help each other find joy within this amazing profession. 
+          
         </p>
         <p className='mb-4 xl:text-lg'>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione unde molestias repellat dignissimos temporibus iusto nam. Expedita vitae at deleniti eveniet, soluta ad cupiditate quas illo commodi consequatur beatae inventore voluptas magni dignissimos ratione. Autem ducimus laudantium illum itaque voluptatibus.
+          This is my journey to explore the topic of mental wellbeing within veterinary medicine.
         </p>
-        <button className='flex justify-center md:justify-start'>
-            <Link href={`/about/`}>
+        <button>
+            <Link className='flex justify-center md:justify-start' href={`/about/`}>
                 <span className='transition duration-300 ease-in transform hover:-translate-y-1 hover:bg-turquoise hover:text-gray-800 inline-block bg-indigo-600 rounded-full font-medium text-white px-8 py-3 cursor-pointer'>About</span>
             </Link>
         </button>
       </div>
-      <div className='hidden md:flex cols-span-1 items-center justify-center'>
+      <div className='hidden md:flex cols-span-1 items-center justify-center '>
         <Image 
           src={heroImage}
           alt="Hero image"

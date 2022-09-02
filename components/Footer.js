@@ -18,7 +18,7 @@ const Footer = () => {
           <li><Link className="" href={`/resources`}>Resources</Link></li>
           <li><Link className="" href={`/contact`}>Contact</Link></li>
         </ul>
-        <div><span className="text-indigo-600 text-xs">poweredBy</span> ModernVet <span className="text-coral text-xl font-extrabold">.</span> Solutions
+        <div><span className="text-indigo-600 text-xs">poweredBy</span> <a href="https://www.modernvet.solutions" target="_blank" rel="noreferrer">ModernVet <span className="text-coral text-xl font-extrabold">.</span> Solutions</a>
             <div className="text-xs text-haze text-center">© 2022, All Rights Reserved.</div></div>
     </div>
   )
