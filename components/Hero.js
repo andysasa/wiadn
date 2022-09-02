@@ -11,15 +11,15 @@ const Hero = () => {
           One in Six Veterinarians Have Seriously Considered Suicide ...
         </h1>
         <p className='mb-4 xl:text-lg'>
-          This is the most pressing issue facing the veterinary industry today. This is an incredibly complex problem and there is not a silver bullet.
+          This is the most pressing issue facing the veterinary industry today. We&apos;re dealing with an incredibly complex problem that has no silver bullet.
         </p>
         
         <p className='mb-4 xl:text-lg'>
-          Through collaboration and positivity, I believe veterinarians can help each other find joy within this amazing profession. 
+          Through collaboration and positivity, I believe that veterinarians can help each other find joy within this amazing profession. 
           
         </p>
         <p className='mb-4 xl:text-lg'>
-          This is my journey to explore the topic of mental wellbeing within veterinary medicine.
+          This is my journey to explore the topic of mental wellbeing in veterinary medicine.
         </p>
         <button>
             <Link className='flex justify-center md:justify-start' href={`/about/`}>
