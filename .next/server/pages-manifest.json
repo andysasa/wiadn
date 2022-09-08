@@ -1,5 +1,14 @@
 {
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
-  "/_document": "pages/_document.js"
+  "/api/comments": "pages/api/comments.js",
+  "/contact": "pages/contact.js",
+  "/": "pages/index.js",
+  "/page/[slug]": "pages/page/[slug].js",
+  "/resources": "pages/resources.js",
+  "/about": "pages/about.js",
+  "/blog/[slug]": "pages/blog/[slug].js",
+  "/category/[slug]": "pages/category/[slug].js",
+  "/_document": "pages/_document.js",
+  "/404": "pages/404.html"
 }

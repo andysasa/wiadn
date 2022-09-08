@@ -7,7 +7,7 @@ import { CONTACT_FORM_ID } from '../config';
 
 
 const FORMSPARK_FORM_ID = "bA4bnUPj";
-const RECAPTCHA_SITE_KEY = "6LeZ1pYhAAAAAEn6uWkDqIV_jqUQFXmTbfbdMq4A";
+const RECAPTCHA_SITE_KEY = "6LdyHOAhAAAAAAew15BpaCPgV-odIClIzkONUBmW";
 
 const Contact = () => {
   const [submit, submitting] = useFormspark({
